@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(48, 71, 114);
+    
+    padding : 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+   
+    padding: 200px;
+    height: 300px;
+    width: 500px;
+    background-color: rgb(28, 63, 139);
+    margin-top:180px; 
+    
+}
+.cpu{
+    position: absolute;
+    padding : 110px;
+    background-color: white;
+
+    left: 30%;
+    top: 25%;
+}
+.cmos{
+    position: absolute;
+    background-color: white;
+    padding : 110px;
+    border-radius: 50%;
+    left: 30%;
+    top : 60%;
+}
+.storage {
+    position: absolute;
+    background-color: white;
+    padding : 20px 20px 40px 170px;
+    top : 70%;
+    left : 45%;
+
+
+}
+.rom{
+     position: absolute;
+    background-color: white;
+      padding : 20px 20px 10px 270px;
+      left : 45%;
+      top : 60%;
+}
+
+.ram{
+     position: absolute;
+    background-color: white;
+      padding : 110px ;
+      width: 220px;
+      left : 45%;
+      top : 25%;
+}
+
+#infoBox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;    
+    background: #000000d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+}
