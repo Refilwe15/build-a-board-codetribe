@@ -1,77 +1,166 @@
 body {
     background-color: rgb(48, 71, 114);
-    
-    padding : 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
 }
+
+.page-title {
+    font-size: 2.8rem;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, rgb(47, 47, 121), rgb(28, 63, 139));
+    border-radius: 12px;
+    margin: 30px auto;
+    width: fit-content;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.page-title:hover {
+    transform: scale(1.05);
+}
+
 
 .container {
     display: flex;
     justify-content: center;
 }
-
-.main{
-   
-    padding: 200px;
-    height: 300px;
-    width: 500px;
-    background-color: rgb(28, 63, 139);
-    margin-top:180px; 
-    
-}
-.cpu{
-    position: absolute;
-    padding : 110px;
-    background-color: white;
-
-    left: 30%;
-    top: 25%;
-}
-.cmos{
-    position: absolute;
-    background-color: white;
-    padding : 110px;
-    border-radius: 50%;
-    left: 30%;
-    top : 60%;
-}
-.storage {
-    position: absolute;
-    background-color: white;
-    padding : 20px 20px 40px 170px;
-    top : 70%;
-    left : 45%;
-
-
-}
-.rom{
-     position: absolute;
-    background-color: white;
-      padding : 20px 20px 10px 270px;
-      left : 45%;
-      top : 60%;
-}
-
-.ram{
-     position: absolute;
-    background-color: white;
-      padding : 110px ;
-      width: 220px;
-      left : 45%;
-      top : 25%;
-}
-
-#infoBox {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;    
-    background: #000000d0;
+.con{
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+.main {
+    position: relative;
+    padding: 50px;
+    height: 500px;
+    width: 580px;
+    background: linear-gradient(90deg, rgb(47, 47, 121), rgb(28, 63, 139));
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.cpu, .cmos, .storage, .rom, .ram, .fan {
+    position: absolute;
+    background-color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color : rgb(64, 64, 179);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cpu {
+    border-radius: 7px;
+    padding: 80px;
+    width: 120px;
+    left: 8%;
+    top: 9%;
+}
+
+.cmos {
+
+    padding: 110px;
+    border-radius: 50%;
+    left: 10%;
+    top: 50%;
+}
+
+.storage {
+    border-radius: 7px;
+    padding: 20px 40px;
+    left: 60%;
+
+    top: 75%;
+}
+
+.rom {
+    border-radius: 7px;
+    padding: 20px 40px;
+    width : 120px;
+    border-radius: 5px;
+    left: 60%;
+    top: 55%;
+}
+
+.ram {
+    border-radius: 7px;
+    padding: 60px;
+    width:90px;
+    height: 90px;
+    left: 60%;
+    top: 9%;
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    padding: 15px 30px;
+    background: linear-gradient(90deg, rgb(47, 47, 121), rgb(28, 63, 139));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: rgb(30, 30, 100);
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .cpu, .cmos, .storage, .rom, .ram, .fan {
+        position: static;
+        margin: 10px auto;
+        padding: 40px;
+        border-radius: 12px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .modal-content {
-    background: white;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-btn {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.component-image {
+    width: 100%;
+    height: 30%;
+    border-radius: 8px;
+    margin-top: 15px;
 }

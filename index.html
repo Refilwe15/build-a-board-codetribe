@@ -3,37 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motherboard</title>
+    <title>Motherboard Components</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1 class="page-title">Motherboard Components</h1>
+
     <div class="container">
         <div class="main">
-            <div class="cpu">
+            <div class="box cpu" id="cpuBox">
                 <p>CPU</p>
             </div>
-            <div class="cmos">
+            <div class="box cmos" id="cmosBox">
                 <p>CMOS</p>
             </div>
-            <div class="storage">
+            <div class="box storage" id="storageBox">
                 <p>STORAGE DEVICE</p>
             </div>
-            <div class="rom">
+            <div class="box rom" id="romBox">
                 <p>ROM</p>
             </div>
-            <div class="ram">
+            <div class="box ram" id="ramBox">
                 <p>RAM</p>
             </div>
+
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="infoBox">
+    <!-- CPU Modal -->
+
+    <div class="modal" id="cpuModal">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <p></p>
+            <span class="close-btn" data-close="cpuModal">&times;</span>
+    <h2>CPU (Central Processing Unit)</h2>
+    <img src="images/cpu-removebg-preview.png" height="40"  class="component-image">
+            <p>The CPU is the brain of the computer where most calculations take place. It processes instructions from programs and handles data operations.</p>
+            
         </div>
     </div>
+
+    <!-- CMOS Modal -->
+    <div class="modal" id="cmosModal">
+    <div class="modal-content">
+            <span class="close-btn" data-close="cmosModal">&times;</span>
+            <h2>CMOS (Complementary Metal-Oxide Semiconductor)</h2>
+            <img src="images/cmos-removebg-preview.png"  class="component-image">
+            <p>CMOS stores BIOS settings and helps the system remember hardware configurations even when powered off.</p>
+            
+        </div>
+    </div>
+
+    <!-- Storage Modal -->
+    <div class="modal" id="storageModal">
+        <div class="modal-content">
+            <span class="close-btn" data-close="storageModal">&times;</span>
+            <h2>Storage Device</h2>
+            <img src="images/storage-removebg-preview.png"  class="component-image">
+            <p>Storage devices like HDDs and SSDs store data permanently, allowing you to save files and programs.</p>
+            
+        </div>
+    </div>
+
+    <!-- ROM Modal -->
+    <div class="modal" id="romModal">
+        <div class="modal-content">
+            <span class="close-btn" data-close="romModal">&times;</span>
+            <h2>ROM (Read-Only Memory)</h2>
+            <img src="images/rom-removebg-preview.png" height="50" width="20"  class="component-image">
+            <p>Is a type of computer memory that stores data permanently</p>
+            
+        </div>
+    </div>
+
+    <!-- RAM Modal -->
+    <div class="modal" id="ramModal">
+        <div class="modal-content">
+            <span class="close-btn" data-close="ramModal">&times;</span>
+            <h2>RAM (Random Access Memory)</h2>
+              <img src="images/ram-removebg-preview.png"  class="component-image">
+            <p>is a computer memory that provides temporary storage for data that the cpu needs to access quickly</p>
+          
+        </div>
+    </div>
+
+    <footer>
+        <a href="bios.html"><button>SWITCH TO BIOS</button></a>
+    </footer>
 
     <script src="script.js"></script>
 </body>
